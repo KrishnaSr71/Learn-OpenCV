@@ -20,9 +20,11 @@ while True:
     isTrue, f = webCam.read()
     cv.imshow('Video', f)
 
-    if cv.waitKey(20) & 0xFF ==ord('d'):
+    if cv.waitKey(0) & 0xFF ==ord('d'):
         break
 
+# Release the videos and destroy all windows
+capture.release()
 webCam.release()
 cv.destroyAllWindows()
 
